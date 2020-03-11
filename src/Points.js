@@ -1,10 +1,12 @@
 import {carre} from './Math.js';
 
 export default class Point{
-    constructor(x,y,z){
+    constructor(x,y,z,color="rgb(92,177,175)"){
         this.x = x;
         this.y = y;
         this.z = z;
+        this.color = color;
+        
     }
 
     distance(autre){
