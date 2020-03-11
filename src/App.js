@@ -1,20 +1,25 @@
 import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Point from './Points';
 
-var nom = "Guillaume";
-var personnage = {nom : "Son Goku", type : "Saiyan",origine : "孫悟空"};
+var p = new Point(50,50,0);
+var p2 = new Point(75,50,0);
+
 
 class App extends Component {
   render(){
+
+    var stylep = {marginLeft:p.x+"px",
+                  marginTop:p.y+"px"};
+    
+    var stylep2 = {marginLeft:p2.x+"px",
+                  marginTop:p2.y+"px"};
+
     return (
-      <div class="App">
-        <b>Description de {personnage.nom}</b>
-        <ul>
-          <li><b>Nom : </b> {personnage.nom}</li>
-          <li><b>Type : </b> {personnage.type}</li>
-          <li><b>Nom origine : </b>{personnage.origine}</li>
-        </ul>
+      <div className="App">
+        <div style={stylep} className='point'></div>
+        <div style={stylep2} className='point'></div>
       </div>
     );
   }
